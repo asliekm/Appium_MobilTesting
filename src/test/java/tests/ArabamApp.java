@@ -1,4 +1,4 @@
-package day2;
+package tests;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -95,7 +95,6 @@ public class ArabamApp {
         System.out.println(aracinSonFiyati);
 
         Assert.assertTrue(Integer.parseInt(aracinSonFiyati)>500000);
-
 
 
     }

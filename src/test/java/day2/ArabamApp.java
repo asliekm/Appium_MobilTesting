@@ -73,6 +73,7 @@ public class ArabamApp {
         driver.findElementByXPath("//*[@text='Passat']").click();
         // 1.4 TSI BlueMotion secilir
         driver.findElementByXPath("//*[@text='1.4 TSi BlueMotion']").click();
+        Thread.sleep(1000);
         // Paket secimi yapilir
        // 500 700
             action
@@ -86,6 +87,16 @@ public class ArabamApp {
           driver.findElementByXPath("//*[@text='Fiyat - Ucuzdan Pahalıya']").click();
 
         // Gelen en ucuz aracin 500.000 tl den buyuk oldugu dogrulanir
+
+          AndroidElement enUcuzAracFiyatiElementi=driver.findElementByXPath("(//*[@resource-id='com.dogan.arabam:id/tvPrice'])[1]");
+          String aracinSonFiyati=enUcuzAracFiyatiElementi.getText();
+        System.out.println(aracinSonFiyati); // 670.000 TL
+        aracinSonFiyati=aracinSonFiyati.replaceAll("\\D","");
+        System.out.println(aracinSonFiyati);
+
+        Assert.assertTrue(Integer.parseInt(aracinSonFiyati)>500000);
+
+
 
     }
 

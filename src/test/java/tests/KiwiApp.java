@@ -20,6 +20,7 @@ public class KiwiApp {
 
     @Test
     public void kiwiAppTest() throws InterruptedException {
+
 // uygulamanin yuklendigi dogrulanir
         Assert.assertTrue(driver.isAppInstalled("com.skypicker.main"));
 // uygulamanin basariyla acildigi dogrulanir

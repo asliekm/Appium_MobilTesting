@@ -9,7 +9,17 @@ import utils.Driver;
 public class KiwiPage {
     public KiwiPage(){
         PageFactory.initElements((WebDriver) Driver.getAndroidDriver(),this);
+        /* Bizler almis oldugumuz locateleri testlerimizin icerisinde kullanmak istedigimiz POM a gore bu sayfaya kaydedilen locateleri
+        kullaniriz. Bu locateler test esnasinda olusturulan obje uzerinden cagirildiginda eger WebDriver ozelligini kullanamazsa
+        o locatler islemlerini yerine getirezler. Bunun icin bu sayfadaki tanimlanan driverimizin WebDriver castingi yapilarak alinan locateleri
+        bu WebDriverin api larini kullanan appium artik islemleri yapabilir hale gelir!!!!!
+         */
+
+
     }
+
+    @FindBy(xpath = "//*[@text='Continue as a guest']")
+    public WebElement misafirButonu;
 
 
 }

@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.Driver;
 
+import java.security.cert.X509Certificate;
+
 public class KiwiPage {
     public KiwiPage(){
         PageFactory.initElements((WebDriver) Driver.getAndroidDriver(),this);
@@ -26,6 +28,9 @@ public class KiwiPage {
 
     @FindBy(xpath = "//*[@text='Choose']")
     public WebElement chooseButton;
+
+    @FindBy(xpath = "(//*[@class='android.widget.TextView'])[12]")
+    public WebElement sonucFiyat;
 
 
 }

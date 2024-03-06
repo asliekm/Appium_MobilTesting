@@ -58,9 +58,19 @@ public class KiwiApp {
         Thread.sleep(1000);
 // gidis tarihi eylul ayinin 21 i olarak secilir ve set date e tiklanir
         ResuableMethods.koordinatTiklamaMethodu(537,1048,1000);
+        ResuableMethods.koordinatTiklamaMethodu(541,1140,1000);
+        ResuableMethods.koordinatTiklamaMethodu(716,1721,1000);
 
 // search butonuna tiklanir
+        ResuableMethods.koordinatTiklamaMethodu(541,1205,3000);
 // en  ucuz ve aktarmasiz filtrelemeleri yapilir
+        ResuableMethods.koordinatTiklamaMethodu(252,252,1000);
+        ResuableMethods.koordinatTiklamaMethodu(563,584,2000);
+        ResuableMethods.koordinatTiklamaMethodu(519,256,1000);
+        ResuableMethods.koordinatTiklamaMethodu(511,1458,3000);
+
 // gelen bilet fiyati kaydedilir ve kullanicin telefonuna sms olarak gonderilir
+        String biletFiyati=page.sonucFiyat.getText();
+        driver.sendSMS("55555555555555","Kiwi app uygulamasindaki aramis oldugunuz biletin fiyati = "+biletFiyati);
     }
 }

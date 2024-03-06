@@ -21,5 +21,11 @@ public class KiwiPage {
     @FindBy(xpath = "//*[@text='Continue as a guest']")
     public WebElement misafirButonu;
 
+    @FindBy(xpath = "//*[@class='android.widget.EditText']")
+    public WebElement kalkisTextKutusu;
+
+    @FindBy(xpath = "//*[@text='Choose']")
+    public WebElement chooseButton;
+
 
 }
